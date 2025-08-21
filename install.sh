@@ -1,10 +1,10 @@
 # Execute all the files in the desktop-environment directory
 
-source ./desktop-environment/swayland.sh
-source ./desktop-environment/drivers.sh
-source ./desktop-environment/utils.sh
-source ./desktop-environment/cli.sh
-source ./desktop-environment/apps.sh
-# source ./desktop-environment/nvidia.sh
+source ./install/desktop-environment/swayland.sh
+source ./install/desktop-environment/drivers.sh
+source ./install/desktop-environment/utils.sh
+source ./install/desktop-environment/cli.sh
+source ./install/desktop-environment/apps.sh
+# source ./install/desktop-environment/nvidia.sh
 
-source ./develop/vscode.sh
+source ./install/develop/vscode.sh
