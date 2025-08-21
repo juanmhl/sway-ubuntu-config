@@ -6,3 +6,5 @@ source ./desktop-environment/utils.sh
 source ./desktop-environment/cli.sh
 source ./desktop-environment/apps.sh
 # source ./desktop-environment/nvidia.sh
+
+source ./develop/vscode.sh
