@@ -5,10 +5,12 @@
 echo "Installing essential desktop applications..."
 
 sudo apt install -y \
-    nemo \
-    file-roller \
-    lximage-qt \
-    mpv \
-    evince
+    nemo \              # File manager
+    file-roller \       # Archive manager
+    lximage-qt \        # Image viewer
+    mpv \               # Media player
+    evince              # Document viewer
 
-echo "Essential desktop applications installation complete. 🎉"
+
+
+echo "Essential desktop applications installation complete."
