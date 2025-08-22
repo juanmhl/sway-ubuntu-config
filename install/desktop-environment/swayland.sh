@@ -14,6 +14,7 @@ sudo apt install -y sway \
     swaybg \
     swayidle \
     mako-notifier \
+    libnotify-bin \
     wlogout
 
 
