@@ -4,23 +4,38 @@
 
 echo "Installing drivers, services, and fonts..."
 
-sudo apt install -y \
-    bluez \                     # Bluetooth support
-    blueman \                   # Bluetooth manager
-    pipewire \                  # Audio and video server
-    pulseaudio \                # Sound server
-    wireplumber \               # Session manager for PipeWire
-    pavucontrol \               # PulseAudio volume control
-    alsa-utils \                # Advanced Linux Sound Architecture utilities
-    network-manager \           # Network management
-    network-manager-gnome \     # GNOME frontend for NetworkManager
-    cups \                      # Common Unix Printing System
-    system-config-printer \     # Printer configuration tool
-    xdg-desktop-portal-wlr \    # Desktop portal for Wayland
-    xdg-desktop-portal-gnome \  # GNOME desktop portal
-    pipewire-bin \              # PipeWire utilities
-    fonts-dejavu \              # DejaVu fonts
-    fonts-ubuntu \              # Ubuntu fonts
-    fonts-font-awesome
+# Bluetooth support
+sudo apt install -y bluez blueman
+
+# Audio support
+sudo apt install -y pipewire pulseaudio wireplumber pavucontrol
+
+# Network support
+sudo apt install -y alsa-utils network-manager network-manager-gnome
+
+# Printing support
+sudo apt install -y cups system-config-printer
+
+# Desktop portal support, for screen sharing and other features
+sudo apt install -y xdg-desktop-portal-wlr xdg-desktop-portal-gnome pipewire-bin
+
+# Install fonts
+sudo apt install -y fonts-dejavu fonts-ubuntu fonts-font-awesome
+
+# Install nerd fonts on ubuntu
+# Create a directory for Nerd Fonts
+mkdir -p ~/.local/share/fonts/NerdFonts
+
+# Download and install JetBrainsMono Nerd Font (as an example)
+echo "Downloading and installing JetBrainsMono Nerd Font..."
+wget -q --show-progress https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
+unzip -q JetBrainsMono.zip -d ~/.local/share/fonts/NerdFonts/JetBrainsMono
+rm JetBrainsMono.zip
+
+# Update font cache
+fc-cache -fv
+
+echo "Nerd Fonts installed successfully"
+
 
 echo "Drivers, services, and fonts installation complete."
